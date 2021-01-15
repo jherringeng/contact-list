@@ -1,0 +1,373 @@
+
+html {
+  font-size: 62.5% !important;
+  margin: 0;
+}
+
+.info-header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+h5, h4 {
+  margin: 0;
+  padding: 3px;
+}
+
+p {
+  margin: 0;
+  padding: 3px;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 100%;
+    }
+
+    #departments {
+      display:block;
+    }
+
+    #locations {
+      display:block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container{
+        max-width: 100%;
+    }
+
+    #employee-selected {
+      display: hide;
+    }
+
+    #employee-selected h5 {
+      font-size: 75%;
+    }
+
+    #employee-selected .avatar {
+      float: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin: 5px;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    #department-selected {
+      display: hide;
+    }
+
+    #department-selected h5 {
+      font-size: 75%;
+    }
+
+    #department-selected .avatar {
+      float: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin: 5px;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    #departments {
+      display:block;
+    }
+
+    #locations {
+      display:block;
+    }
+
+}
+
+.header {
+  display: none;
+}
+
+@media (max-width: 450px) {
+
+  .header-container {
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #F8F9FA;
+    padding: 5px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .info-header {
+    padding-top: 38px;
+  }
+
+  #departments {
+    display:none;
+  }
+
+  #locations {
+    display:none;
+  }
+}
+
+.info-column {
+  overflow: auto;
+}
+
+.add {
+  width: 20px;
+  height: 20px;
+}
+
+.add:hover {
+  cursor: pointer;
+  fill: #ab372c;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #F7F7F9;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+.information:hover {
+  background-color: #6C757D;
+  color: white;
+  cursor: pointer;
+}
+
+.information.location {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.location-buttons {
+  display: flex;
+  align-content: center;
+}
+
+.information .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.information .employee-location {
+  width: 30px;
+  height: 15px;
+  color: white;
+  background-color: #28A745;
+  display: inline-block;
+  text-align: center;
+}
+
+#employee-selected {
+  /* display: none; */
+  font-size: 125%;
+  text-align:center;
+  padding: 10px;
+  position: relative;
+  background-color: #F7F7F9;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+#employee-selected h5 {
+  font-size: 125%;
+}
+
+#department-selected {
+  font-size: 125%;
+  text-align:center;
+  padding: 10px;
+  position: relative;
+  background-color: #F7F7F9;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+#department-selected h5 {
+  font-size: 125%;
+}
+
+#location-selected {
+  /* display: none; */
+  font-size: 125%;
+  text-align:center;
+  padding: 10px;
+  position: relative;
+  background-color: #F7F7F9;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+#location-selected h5 {
+  font-size: 125%;
+}
+
+.edit {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #17A2B8;
+}
+
+.edit:hover {
+  cursor: pointer;
+  background-color: #b84517;
+}
+
+.edit svg{
+  width: 20px;
+  height: 20px;
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #DC3545;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.delete svg{
+  width: 20px;
+  height: 20px;
+}
+
+.edit-location {
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #17A2B8;
+  margin-right: 5px;
+}
+
+.edit-location:hover {
+  cursor: pointer;
+  background-color: #b84517;
+}
+
+.edit-location svg{
+  width: 20px;
+  height: 20px;
+}
+
+.delete-location {
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #DC3545;
+}
+
+.delete-location:hover {
+  cursor: pointer;
+}
+
+.delete-location svg{
+  width: 20px;
+  height: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: red;
+}
+
+.close svg{
+  width: 20px;
+  height: 20px;
+}
+
+#employee-selected .employee-location {
+  background-color: #28A745;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 3px;
+}
+
+#employee-selected .avatar {
+  float: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 5px;
+  vertical-align: top;
+  text-align: center;
+}
+
+#department-selected .employee-location {
+  background-color: #28A745;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 3px;
+}
+
+#department-selected .avatar {
+  float: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 5px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.location .location-short {
+  background-color: #28A745;
+  text-align: center;
+  color: white;
+  width: 30px;
+  height: auto;
+  padding: 3px;
+  margin-left: 3px;
+}
+
+#location-selected .location-short {
+  background-color: #28A745;
+  color: white;
+  width: 40px;
+  height: auto;
+  margin: auto;
+  padding: 3px;
+}

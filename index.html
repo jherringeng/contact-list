@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Company Contact List</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="libs/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="libs/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="libs/favicon_io/favicon-16x16.png">
+
+    <script type="text/javascript" src="libs/js/jquery-3.5.1.min.js"></script>
+
+    <script src="libs/js/popper.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="libs/css/directory-styles.css">
+
+  </head>
+  <body>
+
+  <div class="header-container">
+    <div class="header">
+      <h4 id="employees-select">Employees</h4>
+      <h4 id="departments-select">Departments</h4>
+      <h4 id="locations-select">Locations</h4>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div id="employees" class="col-sm-4">
+
+      <h3 id="employees-header" class="info-header">Employees
+        <span id="addEmployee">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#28a745" class="bi bi-plus-circle-fill add" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+        </span>
+        <span id="searchEmployees">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search add" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </span>
+      </h3>
+
+      <div id="employee-selected" data-id="">
+      </div>
+
+        <div id="employees-info-column" class="info-column">
+
+        </div>
+      </div>
+
+      <div id="departments" class="col-sm-4">
+
+        <h3  id="departments-header" class="info-header">Departments
+          <span id="addDepartment">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#28a745" class="bi bi-plus-circle-fill add" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+          </span>
+        </h3>
+
+        <div id="department-selected" data-id="">
+        </div>
+
+        <div id="departments-info-column" class="info-column">
+
+        </div>
+
+      </div>
+
+      <div id="locations" class="col-sm-4">
+        <h3 id="locations-header" class="info-header">Locations
+          <span id="addLocation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#28a745" class="bi bi-plus-circle-fill add" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+          </span>
+        </h3>
+
+        <div id="location-selected" data-id="">
+        </div>
+
+        <div id="locations-info-column" class="info-column">
+
+          <!-- <div class="information location">
+            <h4>London</h4>
+            <div class="location-buttons">
+              <div class="edit-location">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+              </div>
+              <div class="delete-location">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-dash" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                </svg>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="controlModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <form id="" class="modalForm" onsubmit="return false">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="promoteDemoteButton" type="button" class="btn btn-warning">Promote</button>
+          <button id="modalConfirm" type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <script src="libs/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+  <script src="libs/js/company-directory.js"></script>
+
+  </body>
+</html>
